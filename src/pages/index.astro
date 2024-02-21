@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import AboutMe from '@/components/AboutMe.astro';
+import Experience from '@/components/Experience/Experience.astro';
+import Projects from '@/components/Projects.astro';
+import SectionContainer from '@/components/SectionContainer.astro';
+import Hero from '@/components/Hero.astro';
+
+import BriefcaseIcon from '@/icons/BriefcaseIcon.astro';
+import CodeIcon from '@/icons/CodeIcon.astro';
+import UserIcon from '@/icons/UserIcon.astro';
+---
+
+<Layout title='Portafolio de Larry Finol - Desarrollador y Programador' description=''>
+  <main class='px-4'>
+    <SectionContainer class='py-16 md:py-36'>
+      <Hero />
+    </SectionContainer>
+
+    <div class='space-y-24'>
+      <SectionContainer id='experience'>
+        <h2 class='flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white'>
+          <BriefcaseIcon class='size-8' />
+          Experiencia laboral
+        </h2>
+        <Experience />
+      </SectionContainer>
+
+      <SectionContainer id='projects'>
+        <h2 class='flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white'>
+          <CodeIcon class='size-8' />
+          Proyectos
+        </h2>
+        <Projects />
+      </SectionContainer>
+
+      <SectionContainer id='about-me'>
+        <h2 class='flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white'>
+          <UserIcon class='size-8' />
+          Sobre mí
+        </h2>
+        <AboutMe />
+      </SectionContainer>
+    </div>
+  </main>
+</Layout>
